@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Registro</title>
+    <link rel="stylesheet" href="stylos.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <div class="form-container">
+        <h1>Formulario de Registro</h1>
+        <form action="process.php" method="post" id="registroForm">
+            <label for="Rut">RUT:</label>
+            <input type="text" name="Rut" id="Rut" required>
+            
+            <label for="Paciente">Paciente:</label>
+            <input type="text" name="Paciente" id="Paciente" required>
+            
+            <label for="Medico">Médico:</label>
+            <input type="text" name="Medico" id="Medico" required>
+            
+            <label for="Especialidad">Especialidad:</label>
+            <input type="text" name="Especialidad" id="Especialidad" required>
+            
+            <label for="Diagnostico">Diagnóstico:</label>
+            <textarea name="Diagnostico" id="Diagnostico" required></textarea>
+
+            <label for="fechaIngreso">Fecha de Ingreso:</label>
+            <input type="date" name="fechaIngreso" id="fechaIngreso" required>
+            
+            <label for="fechaSalida">Fecha de Salida:</label>
+            <input type="date" name="fechaSalida" id="fechaSalida" required>
+
+           
+            <button type="submit" name="registrar">Registrar</button>
+            <button type="button" name="borrar" id="borrarButton">Borrar</button>
+            <button type="submit" name="eliminar">Eliminar</button>
+        </form>
+        <div id="message"></div>
+    </div>
+    <script>
+        document.getElementById('borrarButton').addEventListener('click', function() {
+            document.getElementById('registroForm').reset();
+        });
+    </script>
+
+
+</body>
+</html>
