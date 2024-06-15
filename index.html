@@ -4,11 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario de Registro</title>
-    <link rel="stylesheet" href="stylos.css">
-    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
     <div class="form-container">
         <h1>Formulario de Registro</h1>
         <form action="process.php" method="post" id="registroForm">
@@ -33,19 +31,8 @@
             <label for="fechaSalida">Fecha de Salida:</label>
             <input type="date" name="fechaSalida" id="fechaSalida" required>
 
-           
-            <button type="submit" name="registrar">Registrar</button>
-            <button type="button" name="borrar" id="borrarButton">Borrar</button>
-            <button type="submit" name="eliminar">Eliminar</button>
+            <button type="submit" name="registrar" value="registrar">Registrar</button>
         </form>
-        <div id="message"></div>
     </div>
-    <script>
-        document.getElementById('borrarButton').addEventListener('click', function() {
-            document.getElementById('registroForm').reset();
-        });
-    </script>
-
-
 </body>
 </html>
